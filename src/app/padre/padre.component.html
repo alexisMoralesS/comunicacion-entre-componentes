@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row p-3">
+    <div class="col-12 py-3">
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Componente Padre</h5>
+          <h1 class="text-center">{{ contador }}</h1>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-center">Incrementar / decremetar Hijo</h5>
+            </div>
+            <div class="col-6 text-right">
+              <button class="btn btn-info" (click)="incrementarHijo()">
+                +1
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-info" (click)="decrementarHijo()">
+                -1
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 py-3">
+      <app-hijo
+        [contador]="contadorHijo"
+        (incrementarPadre)="incrementar()"
+        (decrementarPadre)="decrementar()"
+      ></app-hijo>
+    </div>
+  </div>
+</div>

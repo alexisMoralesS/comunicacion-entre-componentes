@@ -1,0 +1,17 @@
+<div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Componente Hijo</h5>
+    <h1 class="text-center">{{ contador }}</h1>
+    <div class="row">
+      <div class="col-12">
+        <h5 class="text-center">Incrementar / decremetar padre</h5>
+      </div>
+      <div class="col-6 text-right">
+        <button class="btn btn-primary" (click)="incrementar()">+1</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-primary" (click)="decrementar()">-1</button>
+      </div>
+    </div>
+  </div>
+</div>
